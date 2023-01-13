@@ -11,3 +11,8 @@ products[0][0] #products第0格清單中的 再第0格 (如何存取二維清單
 
 for p in products:
     print(p[0], '的價格是', p[1])
+
+with open('products.csv', 'w', encoding='utf-8') as f:
+    f.write('商品,價格\n')
+    for p in products:
+        f.write(p[0] + ',' + p[1] + '\n')
